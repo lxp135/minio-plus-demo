@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.liuxp</groupId>
+    <artifactId>minio-plus-demo</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+    <name>minio-plus-demo</name>
+    <description>MinIO-Plus 是一个 MinIO 的二次封装与增强工具，在 MinIO 的基础上只做增强，不侵入 MinIO 代码，只为简化开发、提高效率而生。成为 MinIO 在项目中落地的润滑剂。</description>
+    <url>https://github.com/lxp135/minio-plus</url>
+    <developers>
+        <developer>
+            <id>liuxp</id>
+            <name>刘小平</name>
+            <email>contact@liuxp.me</email>
+            <roles>
+                <role>Java Development Engineer</role>
+            </roles>
+            <timezone>2023-10-19 20:00:00</timezone>
+        </developer>
+    </developers>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <modules>
+        <module>minio-plus-application-schedule</module>
+        <module>minio-plus-application-springboot2</module>
+        <module>minio-plus-application-springboot3</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+        <revision>1.0.0</revision>
+        <minio.plus.version>1.0.0</minio.plus.version>
+        <spring-boot2.version>2.7.18</spring-boot2.version>
+        <spring-boot3.version>3.3.2</spring-boot3.version>
+        <spring-boot.version>${spring-boot2.version}</spring-boot.version>
+        <mybatisplus.version>3.5.7</mybatisplus.version>
+        <mysql-connector-j.version>8.0.33</mysql-connector-j.version>
+        <lombok.version>1.18.32</lombok.version>
+        <jakarta-servlet-api.version>6.0.0</jakarta-servlet-api.version>
+        <hutool.version>5.8.28</hutool.version>
+        <knife4j.version>4.4.0</knife4j.version>
+        <swagger.version>2.2.8</swagger.version>
+        <swagger.jakarta.version>2.2.15</swagger.jakarta.version>
+        <minio.version>8.5.11</minio.version>
+        <thumbnailator.version>0.4.20</thumbnailator.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--  mybatis-plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql-connector-j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>${jakarta-servlet-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/io.swagger/swagger-annotations -->
+            <dependency>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <!-- MinIO Plus 相关 -->
+            <dependency>
+                <groupId>me.liuxp</groupId>
+                <artifactId>minio-plus-all-springboot2-starter</artifactId>
+                <version>${minio.plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.liuxp</groupId>
+                <artifactId>minio-plus-core-springboot2-starter</artifactId>
+                <version>${minio.plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.liuxp</groupId>
+                <artifactId>minio-plus-all-springboot-starter</artifactId>
+                <version>${minio.plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.liuxp</groupId>
+                <artifactId>minio-plus-core-springboot-starter</artifactId>
+                <version>${minio.plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.liuxp</groupId>
+                <artifactId>s3-api-definition</artifactId>
+                <version>${minio.plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.liuxp</groupId>
+                <artifactId>s3-api-minio</artifactId>
+                <version>${minio.plus.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
