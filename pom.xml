@@ -9,7 +9,7 @@
     <version>${revision}</version>
     <packaging>pom</packaging>
     <name>minio-plus-demo</name>
-    <description>MinIO-Plus 是一个 MinIO 的二次封装与增强工具，在 MinIO 的基础上只做增强，不侵入 MinIO 代码，只为简化开发、提高效率而生。成为 MinIO 在项目中落地的润滑剂。</description>
+    <description>MinIO-Plus 是一个 MinIO 的二次封装与增强工具，在 MinIO 的基础上只做增强，不侵入 MinIO 代码，只为简化开发、提高效率而生。成为 MinIO 在项目中落地的润滑剂。本项目是该开源项目的演示工程。</description>
     <url>https://github.com/lxp135/minio-plus</url>
     <developers>
         <developer>
@@ -41,8 +41,9 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <revision>1.0.0</revision>
-        <minio.plus.version>1.0.0</minio.plus.version>
-        <spring-boot2.version>2.7.18</spring-boot2.version>
+        <!-- minio-plus version -->
+        <minio.plus.version>1.0.2</minio.plus.version>
+        <spring-boot2.version>2.6.13</spring-boot2.version>
         <spring-boot3.version>3.3.2</spring-boot3.version>
         <spring-boot.version>${spring-boot2.version}</spring-boot.version>
         <mybatisplus.version>3.5.7</mybatisplus.version>
