@@ -42,7 +42,7 @@
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <revision>1.0.0</revision>
         <!-- minio-plus version -->
-        <minio.plus.version>1.0.2</minio.plus.version>
+        <minio.plus.version>1.0.3</minio.plus.version>
         <spring-boot2.version>2.6.13</spring-boot2.version>
         <spring-boot3.version>3.3.2</spring-boot3.version>
         <spring-boot.version>${spring-boot2.version}</spring-boot.version>

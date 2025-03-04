@@ -1,7 +1,7 @@
 spring:
     #应用唯一标识
     application:
-        name: MinIOPlus
+        name: MinIOPlusBoot3Demo
     #配置文件
     profiles:
         active: dev
@@ -25,7 +25,7 @@ spring:
         #驱动名称
         driver-class-name: com.mysql.cj.jdbc.Driver
         #链接地址
-        url: ${DB_JDBC:jdbc:mysql://192.168.50.141:3306/minio-plus?characterEncoding=UTF-8&useSSL=true&serverTimezone=Asia/Shanghai}
+        url: ${DB_JDBC:jdbc:mysql://192.168.50.30:3306/minio_plus?characterEncoding=UTF-8&useSSL=true&serverTimezone=Asia/Shanghai}
         #用户名
         username: ${DB_USERNAME:minio}
         #密码
@@ -71,6 +71,9 @@ minioplus:
     key: minioadmin
     # 密钥
     secret: minioadmin
+    # 桶名前缀，默认为空。如果多个SDK连接同一个minio后端服务，可以配置不同的前缀来区分。
+    # 可选参数，特殊字符不支持,需符合S3存储路径的命名规则，具体规则参考 https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html
+    bucket-prefix: liuxp
     # 上传预签名URL有效期，单位为分钟，可选参数，默认值为60分钟
     upload-expiry: 120
     # 下载和预览预签名URL有效期，单位为分钟，可选参数，默认值为60分钟
