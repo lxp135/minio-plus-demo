@@ -68,7 +68,5 @@ minioplus:
         iis: 2
     # 可选参数，缩略图配置
     thumbnail:
-        # 可选参数，是否开启缩略图。默认为true
-        enable: true
         # 可选参数，缩略图尺寸，默认为300
         size: 300
